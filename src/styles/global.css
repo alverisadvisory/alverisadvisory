@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #13324E;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-feature-settings: "kern" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", "Utile Display", "Georgia", serif;
+    font-weight: 600;
+    color: #13324E;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    line-height: 1.625;
+  }
+
+  a {
+    color: #13324E;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    color: #CF9F41;
+    text-decoration-color: currentColor;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #CF9F41, 0 0 0 4px rgba(207, 159, 65, 0.1);
+  }
+}
+
+@layer components {
+  .container-max {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-max {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .section-spacing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-spacing {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .text-gold {
+    color: #CF9F41;
+  }
+
+  .bg-navy {
+    background-color: #13324E;
+  }
+
+  .bg-light-gray {
+    background-color: #F4F4F4;
+  }
+
+  .text-navy {
+    color: #13324E;
+  }
+
+  .text-mid-gray {
+    color: #9A9A9A;
+  }
+
+  .border-light-gray {
+    border-color: #F4F4F4;
+  }
+}
+

@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const currentPath = '/en/imprint';
+const pageTitle = 'Imprint';
+const pageDescription = 'Imprint and legal information';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Content Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max max-w-3xl">
+      <h1 class="mb-12">Imprint</h1>
+
+      <div class="prose prose-sm max-w-none space-y-8">
+        <!-- Company Details -->
+        <div>
+          <h2>Company Information</h2>
+          <p>
+            <strong>ALVERIS Advisory GmbH</strong><br />
+            <!-- TODO: Add full company address -->
+            Street, Building Number<br />
+            Postal Code City<br />
+            Switzerland
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Email: <a href="mailto:hello@alveris.ch">hello@alveris.ch</a><br />
+            <!-- TODO: Add phone number if applicable -->
+          </p>
+        </div>
+
+        <!-- Legal Form -->
+        <div>
+          <h2>Legal Form</h2>
+          <p>
+            <!-- TODO: Fill in legal entity type and registration details -->
+            Limited Company (GmbH)<br />
+            UID/CHE Number: [to be completed]
+          </p>
+        </div>
+
+        <!-- Responsibility & Liability -->
+        <div>
+          <h2>Responsibility and Liability</h2>
+          <p>
+            <!-- TODO: Add comprehensive liability disclaimer -->
+            The contents of this website are compiled with great care and regularly updated.
+            However, we cannot guarantee the accuracy, completeness and currency of the
+            contents. Any liability for damage resulting from the use of this website is
+            excluded, insofar as it is not based on gross negligence or intent.
+          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div>
+          <h2>Copyright</h2>
+          <p>
+            The contents published on this website (text, images, graphics, etc.) are protected
+            by copyright. Reproduction or distribution without express permission is prohibited.
+          </p>
+        </div>
+
+        <!-- External Links -->
+        <div>
+          <h2>External Links</h2>
+          <p>
+            This website contains links to external websites. We are not responsible for the
+            content of these external pages as we have no control over their contents.
+          </p>
+        </div>
+
+        <!-- Web Design & Hosting -->
+        <div>
+          <h2>Web Design and Hosting</h2>
+          <p>
+            <!-- TODO: Add details about hosting provider -->
+            Website: Astro<br />
+            Hosting: [to be completed]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

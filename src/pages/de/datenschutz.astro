@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const currentPath = '/de/datenschutz';
+const pageTitle = 'Datenschutz';
+const pageDescription = 'Datenschutzerklärung';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Content Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max max-w-3xl">
+      <h1 class="mb-12">Datenschutzerklärung</h1>
+
+      <div class="prose prose-sm max-w-none space-y-8">
+        <!-- Data Controller -->
+        <div>
+          <h2>Verantwortlicher für die Datenverarbeitung</h2>
+          <p>
+            <!-- TODO: Fill in complete contact details of data controller -->
+            ALVERIS Advisory GmbH<br />
+            E-Mail: <a href="mailto:hello@alveris.ch">hello@alveris.ch</a>
+          </p>
+        </div>
+
+        <!-- Purpose & Legal Basis -->
+        <div>
+          <h2>Zweck der Datenverarbeitung</h2>
+          <p>
+            <!-- TODO: Describe specific purposes of data collection -->
+            Ihre Daten werden ausschließlich zur Beantwortung Ihrer Anfragen und zur Pflege
+            des Kundenkontakts verarbeitet. Eine Weitergabe an Dritte findet nicht statt.
+          </p>
+        </div>
+
+        <!-- Contact Form Data -->
+        <div>
+          <h2>Kontaktformular</h2>
+          <p>
+            Wenn Sie das Kontaktformular ausfüllen, werden die Informationen (Name, Unternehmen,
+            E-Mail und Nachricht) erfasst. Diese Daten werden verwendet, um Ihre Anfrage zu
+            bearbeiten und zu beantworten.
+          </p>
+          <!-- TODO: Specify retention period -->
+          <p>
+            <strong>Speicherdauer:</strong> Die Daten werden nach Abschluss der Anfrage für
+            [Zeitraum] gespeichert.
+          </p>
+        </div>
+
+        <!-- Hosting & Technical Data -->
+        <div>
+          <h2>Hosting und technische Daten</h2>
+          <p>
+            <!-- TODO: Add hosting provider name and link to their privacy policy -->
+            Diese Website wird gehostet bei [Hosting-Provider]. Bei jedem Zugriff werden
+            Zugriffsdaten (IP-Adresse, Datum, Uhrzeit, Browser) erfasst.
+          </p>
+          <p>
+            Weitere Informationen zum Datenschutz bei [Hosting-Provider] finden Sie unter:
+            <a href="#">[Link zur Datenschutzerklärung des Hosters]</a>
+          </p>
+        </div>
+
+        <!-- Analytics -->
+        <div>
+          <h2>Analyse- und Tracking-Tools</h2>
+          <p>
+            <!-- TODO: If using analytics, describe which tools and how to opt-out -->
+            Diese Website nutzt derzeit keine Analyse- oder Tracking-Tools, die
+            Nutzerdaten an Dritte übermitteln.
+          </p>
+        </div>
+
+        <!-- Your Rights -->
+        <div>
+          <h2>Ihre Rechte</h2>
+          <p>Sie haben folgende Rechte bezüglich Ihrer persönlichen Daten:</p>
+          <ul>
+            <li>Recht auf Auskunft</li>
+            <li>Recht auf Berichtigung</li>
+            <li>Recht auf Löschung</li>
+            <li>Recht auf Einschränkung der Verarbeitung</li>
+            <li>Recht auf Datenportabilität</li>
+            <li>Recht auf Widerspruch</li>
+          </ul>
+          <p>
+            <!-- TODO: Add email or contact form for data requests -->
+            Bitte kontaktieren Sie uns unter <a href="mailto:hello@alveris.ch"
+              >hello@alveris.ch</a
+            > um Ihre Rechte auszuüben.
+          </p>
+        </div>
+
+        <!-- Data Retention -->
+        <div>
+          <h2>Datenspeicherung</h2>
+          <p>
+            Ihre Daten werden nur solange gespeichert, wie es für den in dieser
+            Datenschutzerklärung beschriebenen Zweck erforderlich ist oder für eine
+            Rechtsverbindlichkeit vorgesehen ist.
+          </p>
+        </div>
+
+        <!-- Changes to Privacy Policy -->
+        <div>
+          <h2>Änderungen dieser Datenschutzerklärung</h2>
+          <p>
+            Diese Datenschutzerklärung kann jederzeit aktualisiert werden. Die aktuelle
+            Version ist immer auf dieser Website verfügbar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

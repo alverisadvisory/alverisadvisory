@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Button } from '../../components/ui/Button';
+
+const currentPath = '/en/about';
+const pageTitle = 'About';
+const pageDescription = 'Independent accounting advisor';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Intro Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h1 class="mb-6">About</h1>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="section-spacing bg-white">
+    <div class="container-max">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-2 space-y-6">
+          <p class="text-lg leading-relaxed">
+            I am an independent business consultant specialising in accounting advisory and
+            finance digitalisation.
+          </p>
+
+          <p class="text-lg leading-relaxed">
+            My professional background lies in advising companies on complex accounting and
+            reporting issues. In this role, I have supported CFOs, management teams and
+            accounting teams with demanding topics - technically deep, structured and pragmatic.
+          </p>
+
+          <div>
+            <h3 class="mb-6">What characterises my work:</h3>
+            <ul class="space-y-3 mb-8">
+              <li class="flex gap-4">
+                <span class="text-gold font-bold flex-shrink-0">•</span>
+                <span>Sparring at eye level</span>
+              </li>
+              <li class="flex gap-4">
+                <span class="text-gold font-bold flex-shrink-0">•</span>
+                <span>Clear recommendations rather than hedging text</span>
+              </li>
+              <li class="flex gap-4">
+                <span class="text-gold font-bold flex-shrink-0">•</span>
+                <span>Focus on feasibility and efficiency</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg font-semibold border-l-4 border-gold pl-6">
+            I understand accounting - and at the same time speak the language of processes and
+            systems. That's where the added value is created.
+          </p>
+        </div>
+
+        <!-- Portrait Placeholder -->
+        <div class="md:col-span-1">
+          <div class="bg-light-gray rounded-lg aspect-square flex items-center justify-center h-80">
+            <div class="text-center text-mid-gray">
+              <p class="font-medium">Portrait</p>
+              <p class="text-sm mt-2">Image placeholder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max text-center">
+      <h2 class="mb-6">I'm happy to support you</h2>
+      <p class="text-lg text-navy/80 mb-8 max-w-2xl mx-auto">
+        Contact me for a no-obligation conversation about your accounting and finance
+        challenges.
+      </p>
+      <Button variant="primary" size="lg" href="/en/contact" client:load>
+        Get in touch
+      </Button>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const currentPath = '/en/privacy';
+const pageTitle = 'Privacy';
+const pageDescription = 'Privacy policy';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Content Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max max-w-3xl">
+      <h1 class="mb-12">Privacy Policy</h1>
+
+      <div class="prose prose-sm max-w-none space-y-8">
+        <!-- Data Controller -->
+        <div>
+          <h2>Data Controller</h2>
+          <p>
+            <!-- TODO: Fill in complete contact details of data controller -->
+            ALVERIS Advisory GmbH<br />
+            Email: <a href="mailto:hello@alveris.ch">hello@alveris.ch</a>
+          </p>
+        </div>
+
+        <!-- Purpose & Legal Basis -->
+        <div>
+          <h2>Purpose of Data Processing</h2>
+          <p>
+            <!-- TODO: Describe specific purposes of data collection -->
+            Your data is processed solely for the purpose of responding to your inquiries and
+            maintaining customer contact. Data is not shared with third parties.
+          </p>
+        </div>
+
+        <!-- Contact Form Data -->
+        <div>
+          <h2>Contact Form</h2>
+          <p>
+            When you complete the contact form, the information (name, company, email and
+            message) is collected. This data is used to process and respond to your inquiry.
+          </p>
+          <!-- TODO: Specify retention period -->
+          <p>
+            <strong>Retention period:</strong> The data will be stored for [time period] after
+            the inquiry is completed.
+          </p>
+        </div>
+
+        <!-- Hosting & Technical Data -->
+        <div>
+          <h2>Hosting and Technical Data</h2>
+          <p>
+            <!-- TODO: Add hosting provider name and link to their privacy policy -->
+            This website is hosted by [Hosting Provider]. When accessing the website, access
+            data (IP address, date, time, browser) is recorded.
+          </p>
+          <p>
+            For more information on data protection with [Hosting Provider], please visit:
+            <a href="#">[Link to hosting provider's privacy policy]</a>
+          </p>
+        </div>
+
+        <!-- Analytics -->
+        <div>
+          <h2>Analytics and Tracking Tools</h2>
+          <p>
+            <!-- TODO: If using analytics, describe which tools and how to opt-out -->
+            This website currently does not use analytics or tracking tools that transmit user
+            data to third parties.
+          </p>
+        </div>
+
+        <!-- Your Rights -->
+        <div>
+          <h2>Your Rights</h2>
+          <p>You have the following rights regarding your personal data:</p>
+          <ul>
+            <li>Right of access</li>
+            <li>Right to rectification</li>
+            <li>Right to erasure</li>
+            <li>Right to restrict processing</li>
+            <li>Right to data portability</li>
+            <li>Right to object</li>
+          </ul>
+          <p>
+            <!-- TODO: Add email or contact form for data requests -->
+            Please contact us at <a href="mailto:hello@alveris.ch">hello@alveris.ch</a> to
+            exercise your rights.
+          </p>
+        </div>
+
+        <!-- Data Retention -->
+        <div>
+          <h2>Data Retention</h2>
+          <p>
+            Your data will only be retained for as long as it is necessary for the purpose
+            described in this privacy policy or as required by law.
+          </p>
+        </div>
+
+        <!-- Changes to Privacy Policy -->
+        <div>
+          <h2>Changes to this Privacy Policy</h2>
+          <p>
+            This privacy policy may be updated at any time. The current version is always
+            available on this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

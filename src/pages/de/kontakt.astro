@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ContactForm } from '../../components/ContactForm';
+import { CONTACT_EMAIL } from '../../lib/siteConfig';
+
+const currentPath = '/de/kontakt';
+const pageTitle = 'Kontakt';
+const pageDescription = 'Kontaktieren Sie mich für ein unverbindliches Gespräch';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Intro Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h1 class="mb-6">Kontakt</h1>
+      <p class="text-xl text-navy/80">
+        Sie möchten ein Thema besprechen oder prüfen, ob eine Zusammenarbeit sinnvoll ist?
+        Gerne in einem unverbindlichen Erstgespräch.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Form -->
+        <div>
+          <h2 class="mb-8">Nachricht senden</h2>
+          <ContactForm client:load isEnglish={false} />
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h2 class="mb-8">Direkter Kontakt</h2>
+          <div class="space-y-8">
+            <div>
+              <h4 class="text-navy font-semibold mb-3">E-Mail</h4>
+              <p class="text-mid-gray">
+                Oder per E-Mail:
+                <br />
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  class="text-gold font-medium hover:text-navy transition-colors"
+                >
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-navy font-semibold mb-3">Verfügbarkeit</h4>
+              <p class="text-navy/80">
+                Ich antworte auf Nachrichten üblicherweise innerhalb von 2 Arbeitstagen.
+              </p>
+            </div>
+
+            <div class="bg-light-gray p-6 rounded-lg">
+              <h4 class="text-navy font-semibold mb-2">Erstkonsultation</h4>
+              <p class="text-navy/80 text-sm">
+                Ein unverbindliches Gespräch ist kostenfrei und dauert ca. 30 Minuten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

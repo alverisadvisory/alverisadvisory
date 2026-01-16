@@ -1,0 +1,66 @@
+---
+import { LanguageSwitch } from './LanguageSwitch';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+// Determine language from path
+const isEnglish = currentPath.startsWith('/en');
+const baseHref = isEnglish ? '/en' : '/de';
+
+const navItems = isEnglish
+  ? [
+      { label: 'Services', href: '/en/services' },
+      { label: 'About', href: '/en/about' },
+      { label: 'Contact', href: '/en/contact' },
+    ]
+  : [
+      { label: 'Leistungen', href: '/de/leistungen' },
+      { label: 'Über mich', href: '/de/ueber-mich' },
+      { label: 'Kontakt', href: '/de/kontakt' },
+    ];
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-light-gray">
+  <nav class="container-max flex items-center justify-between py-4 md:py-6">
+    <!-- Logo -->
+    <a href={baseHref} class="flex-shrink-0 hover:opacity-80 transition-opacity">
+      <img
+        src="/assets/logo/Alveris_logo_color.svg"
+        alt="ALVERIS Advisory GmbH"
+        class="h-16 w-auto md:h-20"
+      />
+    </a>
+
+    <!-- Navigation - desktop -->
+    <div class="hidden md:flex items-center gap-8">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`
+              text-base font-medium transition-colors duration-200
+              ${
+                currentPath === item.href
+                  ? 'text-gold border-b-2 border-gold pb-1'
+                  : 'text-navy hover:text-gold'
+              }
+            `}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Language Switch -->
+    <div class="flex items-center gap-6 md:gap-8">
+      <LanguageSwitch client:load currentPath={currentPath} variant="horizontal" />
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Menu (to be implemented with mobile menu later) -->
+</header>

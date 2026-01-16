@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+
+const currentPath = '/en/';
+const pageTitle = 'Home';
+const pageDescription = 'Accounting advisory for complex finance topics';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Hero Section -->
+  <section class="bg-navy text-white py-20 md:py-32">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <h1 class="text-white mb-6">
+          Accounting advisory for complex finance topics
+        </h1>
+        <p class="text-lg text-white/90 mb-8 leading-relaxed">
+          I support CFOs, managing directors and heads of accounting with demanding accounting
+          and reporting matters - technically sound, pragmatic and focused on efficient
+          processes.
+        </p>
+        <p class="text-xl font-semibold text-gold mb-12">
+          A sparring partner at eye level. Clear recommendations. No buzzwords.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <Button variant="primary" size="lg" href="/en/contact" client:load>
+            Get in touch
+          </Button>
+          <Button variant="secondary" size="lg" href="/en/services" client:load>
+            View services
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typical Situations Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max">
+      <h2 class="mb-12">Typical situations</h2>
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <ul class="space-y-4">
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                Complex accounting or reporting questions where in-house confidence is lacking
+              </span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                Uncertainty about Swiss GAAP FER, IFRS or Swiss law
+              </span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                Financial statements are correct but unnecessarily complex
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-4">
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                Reporting is largely manual and error-prone
+              </span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                Existing systems are in place but rarely used
+              </span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>
+                External consultants speak either accounting or IT - rarely both
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-lg text-navy font-semibold">
+        If you recognise yourself here, a conversation is worth your time.
+      </p>
+    </div>
+  </section>
+
+  <!-- My Approach Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h2 class="mb-8">My approach</h2>
+      <p class="text-lg mb-8">
+        I work as an independent accounting advisor and sparring partner.
+      </p>
+      <div class="mb-8">
+        <ul class="space-y-3">
+          <li class="flex gap-4">
+            <span class="text-gold font-bold flex-shrink-0">•</span>
+            <span>Technical clarity comes first</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-gold font-bold flex-shrink-0">•</span>
+            <span>Recommendations are structured and actionable</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-gold font-bold flex-shrink-0">•</span>
+            <span>Processes are simplified where it makes sense</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-gold font-bold flex-shrink-0">•</span>
+            <span>Automation is a means to an end - not an end in itself</span>
+          </li>
+        </ul>
+      </div>
+      <p class="text-lg text-navy font-semibold">
+        The goal is reliable accounting and reporting that also works efficiently.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Overview Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max">
+      <h2 class="mb-12">Services overview</h2>
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <Card variant="default" client:load>
+          <h3 class="mb-4">Accounting advisory & reporting</h3>
+          <p class="text-navy/80 mb-6">
+            Support with complex accounting and reporting issues under Swiss GAAP FER, IFRS and
+            Swiss law - including sparring on demanding CFO topics.
+          </p>
+          <Button variant="tertiary" href="/en/services" client:load>
+            Learn more →
+          </Button>
+        </Card>
+        <Card variant="default" client:load>
+          <h3 class="mb-4">Extension: efficiency & automation in finance</h3>
+          <p class="text-navy/80 mb-6">
+            Optimisation of closing and reporting processes and better use of existing systems
+            - as a complement to technical work.
+          </p>
+          <Button variant="tertiary" href="/en/services" client:load>
+            Learn more →
+          </Button>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max text-center">
+      <h2 class="mb-6">Free initial consultation</h2>
+      <p class="text-lg text-navy/80 mb-8 max-w-2xl mx-auto">
+        Would you like to discuss a situation or a topic? I'd be happy to have an initial
+        consultation with no obligation.
+      </p>
+      <Button variant="primary" size="lg" href="/en/contact" client:load>
+        Get in touch
+      </Button>
+    </div>
+  </section>
+</BaseLayout>

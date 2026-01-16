@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const currentPath = '/de/impressum';
+const pageTitle = 'Impressum';
+const pageDescription = 'Impressum und rechtliche Informationen';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Intro Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h1 class="mb-6">Impressum</h1>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max max-w-2xl">
+      <div class="space-y-8">
+        <div>
+          <h2 class="mb-4">Anbieter</h2>
+          <p class="text-navy/80">
+            [Name des Unternehmens / Beraters]
+            <br />
+            [Straße und Hausnummer]
+            <br />
+            [Postleitzahl Ort]
+            <br />
+            [Land]
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-4">Kontakt</h2>
+          <p class="text-navy/80">
+            E-Mail: <a href="mailto:hello@alveris.ch" class="text-gold hover:text-navy transition-colors">hello@alveris.ch</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-4">Geschäftstätigkeit</h2>
+          <p class="text-navy/80">
+            Consulting und Beratung im Bereich Accounting Advisory
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-4">Haftungsausschluss</h2>
+          <p class="text-navy/80">
+            Die Informationen auf dieser Website werden ohne Gewähr bereitgestellt. Der Anbieter
+            haftet nicht für die Richtigkeit, Vollständigkeit oder Aktualität der bereitgestellten
+            Informationen. Die Nutzung der Website erfolgt auf eigenes Risiko des Nutzers.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-4">Externe Links</h2>
+          <p class="text-navy/80">
+            Diese Website enthält möglicherweise Links zu externen Websites. Der Anbieter hat keine
+            Kontrolle über den Inhalt dieser externen Websites und haftet nicht für deren Inhalte.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="mb-4">Urheberrecht</h2>
+          <p class="text-navy/80">
+            Die auf dieser Website veröffentlichten Inhalte sind urheberrechtlich geschützt.
+            Jede Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Nutzung außerhalb
+            der Grenzen des Urheberrechts bedarf schriftlicher Zustimmung des Anbieters.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

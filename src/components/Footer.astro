@@ -1,0 +1,98 @@
+---
+import { LanguageSwitch } from './LanguageSwitch';
+import { CONTACT_EMAIL } from '../lib/siteConfig';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+// Determine language from path
+const isEnglish = currentPath.startsWith('/en');
+
+const footerLinks = isEnglish
+  ? [
+      { label: 'Services', href: '/en/services' },
+      { label: 'About', href: '/en/about' },
+      { label: 'Contact', href: '/en/contact' },
+      { label: 'Imprint', href: '/en/imprint' },
+      { label: 'Privacy', href: '/en/privacy' },
+    ]
+  : [
+      { label: 'Leistungen', href: '/de/leistungen' },
+      { label: 'Über mich', href: '/de/ueber-mich' },
+      { label: 'Kontakt', href: '/de/kontakt' },
+      { label: 'Impressum', href: '/de/impressum' },
+      { label: 'Datenschutz', href: '/de/datenschutz' },
+    ];
+
+const copyrightText = isEnglish
+  ? '© 2025 ALVERIS Advisory GmbH. All rights reserved.'
+  : '© 2025 ALVERIS Advisory GmbH. Alle Rechte vorbehalten.';
+
+const footerTagline = isEnglish
+  ? 'Accounting advisory for complex finance topics.'
+  : 'Accounting Advisory für komplexe Finance-Fragestellungen.';
+---
+
+<footer class="bg-navy text-white">
+  <div class="container-max py-16 md:py-20">
+    <!-- Footer content -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <!-- Brand section -->
+      <div class="md:col-span-1">
+        <img
+          src="/assets/logo/Alveris_logo_invert.svg"
+          alt="ALVERIS Advisory GmbH"
+          class="h-16 w-auto mb-4 md:h-18"
+        />
+        <p class="text-white/80 text-sm leading-relaxed">
+          {footerTagline}
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="md:col-span-2">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          {
+            footerLinks.map((link) => (
+              <a
+                href={link.href}
+                class="text-white/80 hover:text-gold transition-colors duration-200 text-sm font-medium"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="md:col-span-1 text-right md:text-left">
+        <p class="text-white/60 text-xs uppercase tracking-wider mb-2">
+          {isEnglish ? 'Contact' : 'Kontakt'}
+        </p>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          class="text-gold hover:text-white transition-colors duration-200 font-medium text-sm break-all"
+        >
+          {CONTACT_EMAIL}
+        </a>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Copyright -->
+      <p class="text-white/60 text-xs text-center md:text-left">
+        {copyrightText}
+      </p>
+
+      <!-- Language Switch -->
+      <div class="flex justify-center md:justify-end">
+        <LanguageSwitch client:load currentPath={currentPath} variant="horizontal" />
+      </div>
+    </div>
+  </div>
+</footer>

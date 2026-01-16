@@ -1,0 +1,55 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../lib/siteConfig';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  currentPath: string;
+}
+
+const { 
+  title = SITE_TITLE, 
+  description = SITE_DESCRIPTION,
+  currentPath = Astro.url.pathname
+} = Astro.props;
+
+const fullTitle = title === SITE_TITLE ? title : `${title} - ${SITE_TITLE}`;
+---
+
+<!doctype html>
+<html lang={currentPath.startsWith('/en') ? 'en' : 'de'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/Alveris_logo_color.svg" />
+    <title>{fullTitle}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/assets/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url.href} />
+  </head>
+
+  <body class="bg-white">
+    <Header currentPath={currentPath} />
+
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <Footer currentPath={currentPath} />
+  </body>
+</html>

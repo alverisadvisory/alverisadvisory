@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+
+const currentPath = '/de/leistungen';
+const pageTitle = 'Leistungen';
+const pageDescription = 'Accounting Advisory und Finance Digitalisierung';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} currentPath={currentPath}>
+  <!-- Intro Section -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h1 class="mb-6">Leistungen</h1>
+      <p class="text-xl text-navy/80">
+        Klare fachliche Lösungen - und dort Effizienz, wo sie Sinn macht.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service 1: Accounting Advisory & Reporting -->
+  <section class="section-spacing bg-white">
+    <div class="container-max">
+      <h2 class="mb-4">Accounting Advisory & Reporting</h2>
+      <p class="text-lg mb-8">
+        Ich unterstütze Unternehmen bei fachlich anspruchsvollen Themen rund um Rechnungslegung
+        und Reporting.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h4 class="mb-6 text-gold">Kernthemen:</h4>
+          <ul class="space-y-3">
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Komplexe Buchungs- und Ausweisfragen</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Swiss GAAP FER, IFRS und Schweizer OR</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Jahres- und Konzernabschlüsse</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Bewertungsthemen und Spezialfälle</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Sparring für CFOs und Head of Accounting</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-light-gray p-8 rounded-lg">
+          <p class="text-navy/80">
+            Fokus auf Klarheit, Nachvollziehbarkeit und saubere Lösungen - nicht auf
+            theoretische Abhandlungen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 2: Efficiency & Automation -->
+  <section class="section-spacing bg-light-gray">
+    <div class="container-max">
+      <h2 class="mb-4">Effizienz & Automatisierung im Finance</h2>
+      <p class="text-lg mb-8">
+        Wenn die fachliche Basis steht, stellt sich oft die nächste Frage: Wie lässt sich das
+        effizienter und nachhaltiger umsetzen?
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h4 class="mb-6 text-gold">Fokusthemen:</h4>
+          <ul class="space-y-3">
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Automatisierung von Reporting- und Abschlussprozessen</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Strukturierung von Datenflüssen</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Sinnvolle Nutzung bestehender Systeme (z. B. Microsoft-Umfeld)</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="text-gold font-bold flex-shrink-0">•</span>
+              <span>Reduktion manueller Tätigkeiten und Fehlerquellen</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-lg border border-light-gray">
+          <p class="text-navy/80">
+            Keine Tool-Evangelisierung. Erst Logik, dann Technik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-spacing bg-white">
+    <div class="container-max text-center">
+      <h2 class="mb-6">Interessiert?</h2>
+      <p class="text-lg text-navy/80 mb-8 max-w-2xl mx-auto">
+        Gerne unterstütze ich Sie bei Ihren Fragestellungen. Kontaktieren Sie mich für ein
+        unverbindliches Gespräch.
+      </p>
+      <Button variant="primary" size="lg" href="/de/kontakt" client:load>
+        Kontakt aufnehmen
+      </Button>
+    </div>
+  </section>
+</BaseLayout>

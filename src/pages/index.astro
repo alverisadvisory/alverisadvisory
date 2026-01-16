@@ -1,0 +1,6 @@
+---
+// Root page - redirect to /de or /en based on browser language and localStorage
+const response = Astro.response;
+response.status = 302;
+response.headers.set('Location', '/de/');
+---
