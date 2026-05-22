@@ -45,7 +45,7 @@
     .hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(207,159,65,0.08) 0%, transparent 70%); pointer-events: none; }
     .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
     .hero-texture { position: absolute; inset: 0; opacity: 0.04; background-image: linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.4) 49%, rgba(255,255,255,0.4) 51%, transparent 52%); background-size: 40px 40px; pointer-events: none; }
-    .hero h1 { font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--white); max-width: 900px; margin-bottom: 1.5rem; letter-spacing: -0.015em; opacity: 0; animation: fadeUp 0.9s 0.3s forwards; }
+    .hero h1 { font-size: clamp(1.9rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--white); max-width: 900px; margin-bottom: 1.5rem; letter-spacing: -0.015em; opacity: 0; animation: fadeUp 0.9s 0.3s forwards; overflow-wrap: break-word; }
     .hero h1 em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; color: var(--gold); white-space: nowrap; }
     .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.68); max-width: 620px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.9s 0.5s forwards; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.7s forwards; }
@@ -190,6 +190,7 @@
       .hero-scroll { display: none; }
       .modal { padding: 2rem 1.5rem; }
       .footer-logo-large { height: 70px; }
+      .hero h1 em { white-space: normal; }
     }
   </style>
 </head>
@@ -242,8 +243,8 @@
 <section class="hero">
   <div class="hero-texture"></div>
   <div class="hero-inner">
-    <h1 data-de='Wenn Accounting, Reporting und Systeme nicht&nbsp;mehr&nbsp;<em>zusammenpassen.</em>'
-        data-en='When accounting, reporting and systems no&nbsp;longer&nbsp;<em>fit together.</em>'>Wenn Accounting, Reporting und Systeme nicht&nbsp;mehr&nbsp;<em>zusammenpassen.</em></h1>
+    <h1 data-de='Wenn Accounting, Reporting und Systeme nicht mehr <em>zusammenpassen.</em>'
+        data-en='When accounting, reporting and systems no longer <em>fit together.</em>'>Wenn Accounting, Reporting und Systeme nicht mehr <em>zusammenpassen.</em></h1>
     <p class="hero-sub" data-de="ALVERIS bringt sie wieder in eine Linie - für CFOs von Schweizer KMU-Gruppen. Vom ERP bis zur Konzernrechnung."
                          data-en="ALVERIS brings them back into alignment - for CFOs of Swiss SME groups. From the ERP system to the consolidated financial statements.">ALVERIS bringt sie wieder in eine Linie - für CFOs von Schweizer KMU-Gruppen. Vom ERP bis zur Konzernrechnung.</p>
     <div class="hero-actions">
