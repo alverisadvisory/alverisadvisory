@@ -102,8 +102,8 @@
     .process-grid::before { content: ''; position: absolute; top: 32px; left: 8%; right: 8%; height: 1px; background: rgba(207,159,65,0.3); z-index: 0; }
     .process-step { padding: 0 1.5rem; position: relative; z-index: 1; }
     .process-num { width: 64px; height: 64px; border-radius: 50%; background: var(--light); border: 1px solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--gold); margin-bottom: 1.5rem; }
-    .process-step h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; }
-    .process-step p { font-size: 0.83rem; font-weight: 300; color: var(--grey-text); line-height: 1.7; }
+    .process-step h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; overflow-wrap: break-word; hyphens: auto; }
+    .process-step p { font-size: 0.83rem; font-weight: 300; color: var(--grey-text); line-height: 1.7; overflow-wrap: break-word; hyphens: auto; }
     .references { background: var(--white); padding: 7rem 0; }
     .ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .ref-card { background: var(--white); border: 1px solid rgba(19,50,78,0.12); padding: 2.5rem; transition: all 0.25s; position: relative; }
@@ -186,6 +186,8 @@
       .situations, .focus, .services, .process, .references, .about, .contact { padding: 5rem 0; }
       .situations-grid { grid-template-columns: 1fr; }
       .focus-list { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .process-step { padding: 0; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .hero-scroll { display: none; }
       .modal { padding: 2rem 1.5rem; }
